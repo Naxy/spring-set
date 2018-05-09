@@ -1,10 +1,10 @@
 package com.wxy.spring_boot;
 
+import java.awt.PageAttributes.MediaType;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.http.MediaType;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;

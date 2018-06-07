@@ -60,14 +60,8 @@ public class User implements Serializable {
 	public void setRegTime(String regTime) {
 		this.regTime = regTime;
 	}
-	public User(Long id, String userName, String passWord, String email, String nickName, String regTime) {
+	public User() {
 		super();
-		this.id = id;
-		this.userName = userName;
-		this.passWord = passWord;
-		this.email = email;
-		this.nickName = nickName;
-		this.regTime = regTime;
 	}
 	public User(String userName, String passWord, String email, String nickName, String regTime) {
 		super();

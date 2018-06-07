@@ -3,10 +3,13 @@ package com.wxy.spring_boot.thymeleaf;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.wxy.spring_boot.argularjs.Person1;
 
 @Controller
 public class ThmeLeafController {
@@ -28,5 +31,9 @@ public class ThmeLeafController {
 		model.addAttribute("singlePerson", single);
 		model.addAttribute("people", people);
 		return "thymeleaf/index";
+	}
+	@RequestMapping(value="search",produces={MediaType.APPLICATION_JSON_VALUE})
+	public Person1 search(String personName){
+		return new Person1(personName,32,"hefei");
 	}
 }

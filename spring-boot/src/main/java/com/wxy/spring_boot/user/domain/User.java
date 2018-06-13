@@ -1,6 +1,7 @@
 package com.wxy.spring_boot.user.domain;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,12 +19,14 @@ public class User implements Serializable {
     private String userName;    
     @Column(nullable = false)    
     private String passWord;    
-    @Column(nullable = false, unique = true)    
+    @Column(nullable = true, unique = true)    
     private String email;    
     @Column(nullable = true, unique = true)    
     private String nickName;    
-    @Column(nullable = false)    
-    private String regTime;
+    @Column(nullable = true)    
+    private String regTime ;
+    
+    private int userSex;
 	public Long getId() {
 		return id;
 	}
@@ -70,6 +73,19 @@ public class User implements Serializable {
 		this.email = email;
 		this.nickName = nickName;
 		this.regTime = regTime;
+	}
+	
+	public User(String userName,String password,int userSex){
+		this.userName = userName;
+		this.userSex = userSex;
+		this.passWord = password;
+	}
+	
+	public int getUserSex() {
+		return userSex;
+	}
+	public void setUserSex(int userSex) {
+		this.userSex = userSex;
 	}
     
 }

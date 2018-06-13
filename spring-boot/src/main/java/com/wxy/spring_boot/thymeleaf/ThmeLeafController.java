@@ -30,7 +30,7 @@ public class ThmeLeafController {
 		people.add(p3);
 		model.addAttribute("singlePerson", single);
 		model.addAttribute("people", people);
-		return "thymeleaf/index";
+		return "thymeleaf/index1";
 	}
 	@RequestMapping(value="search",produces={MediaType.APPLICATION_JSON_VALUE})
 	public Person1 search(String personName){

@@ -12,10 +12,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;
 
-@Configuration
+//@Configuration
 public class ShiroConfig {
 
-	@Bean
+	/*@Bean
 	public ShiroFilterFactoryBean shiroFilter(SecurityManager securityManager) {
 		ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
 		shiroFilterFactoryBean.setSecurityManager(securityManager);
@@ -23,7 +23,7 @@ public class ShiroConfig {
 		Map<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
 		filterChainDefinitionMap.put("/static/**", "anon");
 		// filterChainDefinitionMap.put("/logout", "/logout");
-		filterChainDefinitionMap.put("/**", "authc");
+		filterChainDefinitionMap.put("/**", "anon");
 
 		shiroFilterFactoryBean.setLoginUrl("/login");
 		shiroFilterFactoryBean.setSuccessUrl("/index");
@@ -45,12 +45,12 @@ public class ShiroConfig {
 		return securityManager;
 	}
 
-	/**
+	*//**
 	 * 开启shiro aop注解支持. 使用代理方式;所以需要开启代码支持;
 	 * 
 	 * @param securityManager
 	 * @return
-	 */
+	 *//*
 	@Bean
 	public AuthorizationAttributeSourceAdvisor authorizationAttributeSourceAdvisor(SecurityManager securityManager) {
 		AuthorizationAttributeSourceAdvisor authorizationAttributeSourceAdvisor = new AuthorizationAttributeSourceAdvisor();
@@ -69,5 +69,5 @@ public class ShiroConfig {
 		r.setExceptionAttribute("ex"); // Default is "exception"
 		// r.setWarnLogCategory("example.MvcLogger"); // No default
 		return r;
-	}
+	}*/
 }
